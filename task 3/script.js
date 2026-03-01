@@ -1,36 +1,41 @@
 function convertTemperature() {
+    // Get the input value and the selected unit
+    const tempValue = document.getElementById("temperature").value;
+    const unit = document.getElementById("unit").value;
+    const resultArea = document.getElementById("result");
 
-    let tempInput = document.getElementById("temperature").value;
-    let unit = document.getElementById("unit").value;
-    let result = document.getElementById("result");
-
-    if (tempInput === "" || isNaN(tempInput)) {
-        result.innerHTML = "Please enter a valid number!";
-        result.style.color = "red";
+    // Check if input is empty
+    if (tempValue === "") {
+        resultArea.innerHTML = "⚠️ Please enter a number";
+        resultArea.style.color = "#ff5e5e";
         return;
     }
 
-    let temperature = parseFloat(tempInput);
-    let convertedValue = "";
+    const temp = parseFloat(tempValue);
+    let c, f, k;
 
+    // Conversion Logic
     if (unit === "celsius") {
-        let fahrenheit = (temperature * 9/5) + 32;
-        let kelvin = temperature + 273.15;
-        convertedValue = `${temperature} °C = ${fahrenheit.toFixed(2)} °F | ${kelvin.toFixed(2)} K`;
+        c = temp;
+        f = (temp * 9/5) + 32;
+        k = temp + 273.15;
+    } else if (unit === "fahrenheit") {
+        c = (temp - 32) * 5/9;
+        f = temp;
+        k = c + 273.15;
+    } else if (unit === "kelvin") {
+        c = temp - 273.15;
+        f = (c * 9/5) + 32;
+        k = temp;
     }
 
-    else if (unit === "fahrenheit") {
-        let celsius = (temperature - 32) * 5/9;
-        let kelvin = celsius + 273.15;
-        convertedValue = `${temperature} °F = ${celsius.toFixed(2)} °C | ${kelvin.toFixed(2)} K`;
-    }
-
-    else if (unit === "kelvin") {
-        let celsius = temperature - 273.15;
-        let fahrenheit = (celsius * 9/5) + 32;
-        convertedValue = `${temperature} K = ${celsius.toFixed(2)} °C | ${fahrenheit.toFixed(2)} °F`;
-    }
-
-    result.innerHTML = convertedValue;
-    result.style.color = "green";
+    // Display formatted results
+    resultArea.style.color = "#f7b731";
+    resultArea.innerHTML = `
+        <div style="font-size: 1.2rem; font-weight: bold;">
+            ${c.toFixed(2)} °C <br>
+            ${f.toFixed(2)} °F <br>
+            ${k.toFixed(2)} K
+        </div>
+    `;
 }
