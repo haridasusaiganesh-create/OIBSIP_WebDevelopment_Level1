@@ -2,77 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Web Development Projects</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-        }
-
-        .container {
-            background: white;
-            padding: 50px;
-            border-radius: 15px;
-            width: 400px;
-            text-align: center;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-        }
-
-        h1 {
-            margin-bottom: 30px;
-            color: #333;
-        }
-
-        .task-btn {
-            display: block;
-            text-decoration: none;
-            background: #667eea;
-            color: white;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            transition: 0.3s ease;
-        }
-
-        .task-btn:hover {
-            background: #4b5bdc;
-            transform: translateY(-4px);
-        }
-
-        footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-    </style>
+    <title>Haridas Sai Ganesh | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>My Web Development Tasks</h1>
+    <header>
+        <div class="logo">HG<span>.</span></div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <a href="task%201/" class="task-btn">Task 1 - Landing Page</a>
-    <a href="task%202/" class="task-btn">Task 2 - Portfolio</a>
-    <a href="task%203/" class="task-btn">Task 3 - Temperature Converter</a>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Haridas <br> Sai Ganesh<span>.</span></h1>
+            <h3>Web Developer & UI Designer</h3>
+            <p>I specialize in building clean, professional, and functional web experiences using HTML and CSS.</p>
+            <div class="hero-btns">
+                <button onclick="window.print()">Download Resume</button>
+                <a href="#projects" class="secondary-btn">View My Work</a>
+            </div>
+        </div>
+        
+        <div class="hero-image">
+            <img src="Portfolio_demo.gif" alt="Portfolio Demo Video/GIF">
+        </div>
+    </section>
+
+    <section id="about" class="section dark">
+        <h2>— About Me</h2>
+        <p class="section-desc">I am a passionate beginner developer focused on mastering the art of web design. I love turning complex problems into simple, beautiful interface designs.</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-box">HTML5</div>
+            <div class="skill-box">CSS3</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">UI/UX Design</div>
+        </div>
+    </section>
+
+    <section id="projects" class="section dark">
+        <h2>Latest Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h4>Task 1: Landing Page</h4>
+                <p>A high-conversion landing page design.</p>
+            </div>
+            <div class="project-card">
+                <h4>Task 2: Personal Portfolio</h4>
+                <p>The site you are currently viewing!</p>
+            </div>
+            <div class="project-card">
+                <h4>Task 3: Temp Converter</h4>
+                <p>A functional JavaScript tool for calculations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Get In Touch</h2>
+        <p>Email: example@email.com</p>
+        <p>Phone: +91 12345 67890</p>
+    </section>
 
     <footer>
-        © 2026 Haridas Sai Ganesh
+        © 2026 Haridas Sai Ganesh | Designed with Passion
     </footer>
-</div>
 
 </body>
 </html>
