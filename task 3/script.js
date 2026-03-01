@@ -1,31 +1,23 @@
-function convert() {
-    const valInput = document.getElementById("tempInput").value;
-    const unit = document.getElementById("unitSelect").value;
-    const display = document.getElementById("resultDisplay");
+function convertTemp() {
 
-    if (valInput === "") {
-        display.innerHTML = "Enter a number";
+    let degrees = document.getElementById("degrees").value;
+    let type = document.getElementById("type").value;
+    let resultField = document.getElementById("result");
+
+    if (degrees === "") {
+        resultField.value = "Please enter a value";
         return;
     }
 
-    const temp = parseFloat(valInput);
-    let resultText = "";
+    degrees = parseFloat(degrees);
 
-    if (unit === "F") {
-        // Fahrenheit to Celsius and Kelvin
-        let c = (temp - 32) * 5/9;
-        resultText = `${c.toFixed(4)} °C`;
-    } 
-    else if (unit === "C") {
-        // Celsius to Fahrenheit
-        let f = (temp * 9/5) + 32;
-        resultText = `${f.toFixed(4)} °F`;
-    } 
-    else if (unit === "K") {
-        // Kelvin to Celsius
-        let c = temp - 273.15;
-        resultText = `${c.toFixed(4)} °C`;
+    if (type === "fahrenheit") {
+        // Convert Fahrenheit to Celsius
+        let result = (degrees - 32) * 5 / 9;
+        resultField.value = result.toFixed(4) + " °C";
+    } else {
+        // Convert Celsius to Fahrenheit
+        let result = (degrees * 9 / 5) + 32;
+        resultField.value = result.toFixed(4) + " °F";
     }
-
-    display.innerHTML = resultText;
 }
