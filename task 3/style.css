@@ -1,45 +1,53 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth;
 }
 
-body {
-    background: #1e1e2f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: white;
+body { background-color: #1e1e2f; color: white; line-height: 1.6; }
+
+header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 8%; background: #1e1e2f; position: sticky; top: 0; z-index: 100;
 }
 
-.container {
-    background: #2c2c3e;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    width: 350px;
+.logo { font-size: 24px; font-weight: bold; }
+.logo span { color: #f7b731; }
+
+nav a { color: #bbb; text-decoration: none; margin-left: 20px; transition: 0.3s; }
+nav a:hover { color: #f7b731; }
+
+.hero {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 80px 8%; min-height: 80vh; background: #2c2c3e;
 }
 
-input, select, button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 5px;
-}
+.hero-text h1 { font-size: 3.5rem; line-height: 1.1; }
+.hero-text h1 span { color: #f7b731; }
+.hero-text p { margin: 20px 0; color: #ccc; max-width: 450px; }
 
 button {
-    background: #f7b731;
-    cursor: pointer;
+    padding: 12px 25px; background: #f7b731; border: none;
+    border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s;
 }
 
-button:hover {
-    background: #ffcc00;
-}
+button:hover { background: #ffcc00; transform: translateY(-3px); }
 
-#result {
-    margin-top: 20px;
-    font-weight: bold;
+.hero-image img { width: 380px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+.section { padding: 80px 8%; text-align: center; }
+.dark { background: #1e1e2f; }
+
+.project-grid { display: flex; gap: 20px; justify-content: center; margin-top: 40px; }
+.project-card {
+    background: #2c2c3e; padding: 30px; border-radius: 10px; width: 280px;
+    border-bottom: 4px solid #f7b731; transition: 0.3s;
+}
+.project-card:hover { transform: translateY(-10px); }
+.link { color: #f7b731; text-decoration: none; display: block; margin-top: 15px; font-weight: bold; }
+
+/* Responsive Mobile Layout */
+@media (max-width: 768px) {
+    .hero { flex-direction: column; text-align: center; }
+    .hero-image img { width: 100%; margin-top: 40px; }
+    .project-grid { flex-direction: column; align-items: center; }
 }
