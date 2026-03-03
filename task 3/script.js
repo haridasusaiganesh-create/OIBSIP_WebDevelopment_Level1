@@ -27,7 +27,7 @@ function convertTemp() {
     celsius = (tempInput - 32) * 5/9;
     fahrenheit = tempInput;
     kelvin = celsius + 273.15;
-  } else {
+  } else { // Kelvin
     celsius = tempInput - 273.15;
     fahrenheit = (celsius * 9/5) + 32;
     kelvin = tempInput;
