@@ -2,25 +2,46 @@
 <html>
 <head>
     <title>Temperature Converter</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body { 
+            font-family: Arial; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background: linear-gradient(to right, #667eea, #764ba2);
+        }
+        .box {
+            background: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        input, select, button {
+            padding: 10px;
+            margin: 10px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Temperature Converter</h1>
+<div class="box">
+    <h2>Temperature Converter</h2>
 
-        <input type="number" id="tempInput" placeholder="Enter temperature">
+    <input type="number" id="temp" placeholder="Enter temperature">
 
-        <select id="unit">
-            <option value="c">Celsius to Fahrenheit</option>
-            <option value="f">Fahrenheit to Celsius</option>
-        </select>
+    <select id="unit">
+        <option value="c">Celsius to Fahrenheit</option>
+        <option value="f">Fahrenheit to Celsius</option>
+    </select>
 
-        <button onclick="convertTemp()">Convert</button>
+    <button onclick="convert()">Convert</button>
 
-        <h2 id="result"></h2>
-    </div>
+    <h3 id="result"></h3>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
