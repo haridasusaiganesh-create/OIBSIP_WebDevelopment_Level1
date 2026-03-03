@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+  background: #f9f9f9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,13 +15,6 @@ body {
 }
 
 /* Converter Box */
-.converter-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
 .converter-box {
   background: #ffffff;
   padding: 40px 50px;
@@ -47,6 +40,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* Unit Selection */
 .unit-select {
   display: flex;
   justify-content: space-around;
@@ -58,6 +52,7 @@ body {
   cursor: pointer;
 }
 
+/* Button */
 .cta-btn {
   background: #00a87e;
   color: white;
@@ -74,8 +69,19 @@ body {
   background: #008a65;
 }
 
+/* Result */
 .result {
   font-size: 1.2rem;
   font-weight: bold;
   color: #001c3d;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .converter-box {
+    padding: 30px 20px;
+  }
+  .converter-box h1 {
+    font-size: 2rem;
+  }
 }
