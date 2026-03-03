@@ -33,9 +33,10 @@ nav {
 
 .nav-links a:hover { color: #d4ff00; }
 
-/* Header / Hero Section */
+/* Header */
 header {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000');
     background-size: cover;
     background-position: center;
     height: 80vh;
@@ -58,7 +59,7 @@ header {
     margin-top: 20px;
 }
 
-/* Services / Container */
+/* Services */
 .container {
     display: flex;
     justify-content: center;
@@ -77,10 +78,16 @@ header {
     text-align: center;
 }
 
-.box:hover { transform: translateY(-10px); background: #e0e0e0; }
+.box:hover { 
+    transform: translateY(-10px); 
+    background: #e0e0e0; 
+}
 
 /* Contact & Footer */
-section { padding: 60px 20px; text-align: center; }
+section { 
+    padding: 60px 20px; 
+    text-align: center; 
+}
 
 footer {
     background: #222;
