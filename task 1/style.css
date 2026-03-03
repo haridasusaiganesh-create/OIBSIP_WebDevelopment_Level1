@@ -9,6 +9,34 @@
 body {
   background: linear-gradient(to bottom, #f9f9f9, #ffffff);
   color: #001c3d;
+  line-height: 1.6;
+}
+
+/* Demo Section */
+.demo {
+  background: #f0f8ff;
+  padding: 60px 10%;
+  text-align: left;
+}
+
+.demo h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00a87e;
+}
+
+.demo p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.demo ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.demo li {
+  margin-bottom: 10px;
 }
 
 /* Navigation */
@@ -17,6 +45,8 @@ header nav {
   justify-content: space-between;
   padding: 20px 50px;
   align-items: center;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
 .logo {
@@ -47,7 +77,6 @@ header nav {
   justify-content: space-between;
   align-items: center;
   padding: 80px 50px;
-  position: relative;
 }
 
 .hero-text h1 {
