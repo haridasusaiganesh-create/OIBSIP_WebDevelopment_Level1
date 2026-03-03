@@ -6,28 +6,44 @@ This repository contains the tasks completed for the **Oasis Infobyte Web Develo
 
 ## 🚀 Live Project Links
 
-🔗 **Main Project Page**
-https://YOUR_GITHUB_USERNAME.github.io/OIBSIP_WebDevelopment_Level1/
+### 🔹 Main Project Page
+👉 https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/
 
 ---
 
-### 🌐 Task 1 – Landing Page
-https://YOUR_GITHUB_USERNAME.github.io/OIBSIP_WebDevelopment_Level1/task1/
+### 🔹 Task 1 - Landing Page
+👉 https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%201/
 
-### 👤 Task 2 – Personal Portfolio
-https://YOUR_GITHUB_USERNAME.github.io/OIBSIP_WebDevelopment_Level1/task2/
+A modern responsive landing page built using HTML and CSS with clean layout and design principles.
 
-### 🌡️ Task 3 – Temperature Converter
-https://YOUR_GITHUB_USERNAME.github.io/OIBSIP_WebDevelopment_Level1/task3/
+---
+
+### 🔹 Task 2 - Personal Portfolio
+👉 https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%202/
+
+A professional portfolio website showcasing skills, projects, and contact information.
+
+---
+
+### 🔹 Task 3 - Temperature Converter
+👉 https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%203/
+
+A temperature converter web application using HTML, CSS, and JavaScript.
 
 ---
 
 ## 🛠️ Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
+- HTML5  
+- CSS3  
+- JavaScript  
 
 ---
 
-## 📂 Folder Structure
+## 👨‍💻 Developed By
+
+**Haridas Sai Ganesh**  
+Oasis Infobyte Internship  
+Year: 2026
+
+---
