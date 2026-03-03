@@ -6,92 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
 
-        body{
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4e73df, #1cc88a);
         }
 
-        .container{
-            background:white;
-            padding:50px;
-            border-radius:15px;
-            width:400px;
-            text-align:center;
-            box-shadow:0 15px 30px rgba(0,0,0,0.3);
+        .container {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
         }
 
-        h1{
-            margin-bottom:10px;
-            color:#333;
+        h1 {
+            margin-bottom: 10px;
+            color: #333;
         }
 
-        h2{
-            margin-bottom:30px;
-            font-size:18px;
-            color:#555;
+        h2 {
+            margin-bottom: 30px;
+            font-size: 18px;
+            color: #666;
         }
 
-        .task-btn{
-            display:block;
-            text-decoration:none;
-            background:#667eea;
-            color:white;
-            padding:15px;
-            margin:15px 0;
-            border-radius:8px;
-            font-size:16px;
-            font-weight:bold;
-            transition:0.3s ease;
+        .btn {
+            display: block;
+            text-decoration: none;
+            background: #4e73df;
+            color: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
-        .task-btn:hover{
-            background:#4b5bdc;
-            transform:translateY(-4px);
+        .btn:hover {
+            background: #2e59d9;
+            transform: translateY(-3px);
         }
 
-        .task-btn:active{
-            transform:scale(0.95);
-        }
-
-        footer{
-            margin-top:20px;
-            font-size:14px;
-            color:#666;
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>OIBSIP Internship</h1>
-        <h2>Web Development Level 1 Projects</h2>
+<div class="container">
+    <h1>OIBSIP Internship</h1>
+    <h2>Web Development Level 1 Projects</h2>
 
-        <a href="task1/" class="task-btn">
-            🌐 Task 1 - Landing Page
-        </a>
+    <a href="task1/" class="btn">🌐 Task 1 - Landing Page</a>
+    <a href="task2/" class="btn">👤 Task 2 - Portfolio</a>
+    <a href="task3/" class="btn">🌡️ Task 3 - Temperature Converter</a>
 
-        <a href="task2/" class="task-btn">
-            👤 Task 2 - Personal Portfolio
-        </a>
-
-        <a href="task3/" class="task-btn">
-            🌡️ Task 3 - Temperature Converter
-        </a>
-
-        <footer>
-            © 2026 Haridas Sai Ganesh
-        </footer>
-    </div>
+    <footer>
+        © 2026 Haridas Sai Ganesh
+    </footer>
+</div>
 
 </body>
 </html>
