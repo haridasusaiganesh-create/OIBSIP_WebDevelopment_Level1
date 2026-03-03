@@ -1,94 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Ganesh Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sai Ganesh Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>Sai Ganesh</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h2>Hi, I'm Sai Ganesh</h2>
-            <p>Web Developer | Frontend Enthusiast | Problem Solver</p>
-        </div>
-    </section>
+<!-- Header -->
+<header id="header">
+  <div class="container">
+    <h1 class="logo">Sai Ganesh</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am a passionate web developer with experience in building responsive and modern websites. I enjoy solving problems and creating projects that make a difference.</p>
-        </div>
-    </section>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>Hello, I'm Sai Ganesh</h2>
+    <p>Web Developer | Frontend Enthusiast | Problem Solver</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </div>
+</section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill">HTML</div>
-                <div class="skill">CSS</div>
-                <div class="skill">JavaScript</div>
-                <div class="skill">React</div>
-                <div class="skill">Python</div>
-            </div>
-        </div>
-    </section>
+<!-- About Section -->
+<section id="about" class="section">
+  <div class="container">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>I am a passionate web developer with experience in building responsive and modern websites. I focus on clean code, fast performance, and creating user-friendly interfaces.</p>
+        <p>I love learning new technologies, problem-solving, and building projects that make a difference.</p>
+      </div>
+      <div class="about-img">
+        <img src="images/profile.jpg" alt="Sai Ganesh Profile">
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project">
-                    <h3>Landing Page</h3>
-                    <p>A professional landing page with responsive design.</p>
-                </div>
-                <div class="project">
-                    <h3>Portfolio Website</h3>
-                    <p>My personal portfolio showcasing my skills and projects.</p>
-                </div>
-                <div class="project">
-                    <h3>Todo App</h3>
-                    <p>A simple and interactive Todo application using JavaScript.</p>
-                </div>
-            </div>
+<!-- Skills Section -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">
+        <h3>HTML</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 95%"></div>
         </div>
-    </section>
+      </div>
+      <div class="skill">
+        <h3>CSS</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 90%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>JavaScript</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 85%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>React</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 80%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <h3>Python</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 75%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+<!-- Projects Section -->
+<section id="projects" class="section">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="images/project1.jpg" alt="Landing Page">
+        <div class="project-info">
+          <h3>Landing Page</h3>
+          <p>Responsive landing page with modern design.</p>
+          <a href="#" class="btn">View</a>
         </div>
-    </section>
+      </div>
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="Portfolio Website">
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>Modern portfolio to showcase skills and projects.</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/project3.jpg" alt="Todo App">
+        <div class="project-info">
+          <h3>Todo App</h3>
+          <p>Interactive JavaScript-based task manager.</p>
+          <a href="#" class="btn">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Sai Ganesh. All rights reserved.</p>
-        </div>
-    </footer>
+<!-- Contact Section -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Sai Ganesh. All rights reserved.</p>
+  </div>
+</footer>
+
 </body>
 </html>
