@@ -8,28 +8,25 @@
 </head>
 <body>
 
-  <!-- Converter Box -->
-  <section class="converter-section">
-    <div class="converter-box">
-      <h1>Temperature Converter<span>.</span></h1>
-      <input type="number" id="tempInput" placeholder="Enter Temperature">
-      
-      <div class="unit-select">
-        <label>
-          <input type="radio" name="unit" value="C" checked> Celsius
-        </label>
-        <label>
-          <input type="radio" name="unit" value="F"> Fahrenheit
-        </label>
-        <label>
-          <input type="radio" name="unit" value="K"> Kelvin
-        </label>
-      </div>
-      
-      <button class="cta-btn" onclick="convertTemp()">Convert</button>
-      <p class="result" id="result">Result will appear here</p>
+  <div class="converter-box">
+    <h1>Temperature Converter</h1>
+    
+    <!-- Input Field -->
+    <input type="number" id="tempInput" placeholder="Enter Temperature">
+    
+    <!-- Unit Selection -->
+    <div class="unit-select">
+      <label><input type="radio" name="unit" value="C" checked> Celsius</label>
+      <label><input type="radio" name="unit" value="F"> Fahrenheit</label>
+      <label><input type="radio" name="unit" value="K"> Kelvin</label>
     </div>
-  </section>
+    
+    <!-- Convert Button -->
+    <button class="cta-btn" onclick="convertTemp()">Convert</button>
+    
+    <!-- Result Display -->
+    <p class="result" id="result">Result will appear here</p>
+  </div>
 
   <script src="script.js"></script>
 </body>
