@@ -1,21 +1,20 @@
-function convertTemp() {
-
-    var temp = document.getElementById("temperature").value;
+function convert() {
+    var value = document.getElementById("temp").value;
     var unit = document.getElementById("unit").value;
     var result = document.getElementById("result");
 
-    if (temp === "") {
-        result.innerHTML = "Please enter a temperature value.";
+    if (value === "") {
+        result.innerHTML = "Enter a value";
         return;
     }
 
-    temp = parseFloat(temp);
+    value = parseFloat(value);
 
     if (unit === "c") {
-        var fahrenheit = (temp * 9/5) + 32;
-        result.innerHTML = temp + "°C = " + fahrenheit.toFixed(2) + "°F";
+        var f = (value * 9/5) + 32;
+        result.innerHTML = value + "°C = " + f.toFixed(2) + "°F";
     } else {
-        var celsius = (temp - 32) * 5/9;
-        result.innerHTML = temp + "°F = " + celsius.toFixed(2) + "°C";
+        var c = (value - 32) * 5/9;
+        result.innerHTML = value + "°F = " + c.toFixed(2) + "°C";
     }
 }
