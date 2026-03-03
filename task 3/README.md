@@ -1,50 +1,34 @@
-🌡️ Task 3 – Temperature Converter
-📌 Project Overview
+# 🌐 OIBSIP Web Development Internship – Level 1
 
-This project is a Temperature Converter Web Application built using HTML, CSS, and JavaScript.
-It allows users to enter a temperature value, select the unit, and convert it into other temperature units.
+This repository contains Level 1 tasks completed during the OIB-SIP Web Development Internship.
 
-🚀 Features
+---
 
-Input field with number validation
+## 🔗 Live Project Links
 
-Dropdown to select Celsius, Fahrenheit, or Kelvin
+### 🏠 Main Project
+👉 [View Main Index](https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/)
 
-Convert button
+### ✅ Task 1 – Landing Page
+👉 [View Task 1](https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task1/)
 
-Displays converted temperature with correct units
+### ✅ Task 2 – Portfolio
+👉 [View Task 2](https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task2/)
 
-Simple and clean UI
+### ✅ Task 3 – Temperature Converter
+👉 [View Task 3](https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task3/)
 
-🛠️ Technologies Used
+---
 
-HTML5
+## 🛠 Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+- GitHub
+- GitHub Pages
 
-CSS3
+---
 
-JavaScript (DOM Manipulation)
-
-📂 Project Structure
-Temperature-Converter/
-│
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-▶️ How to Run
-
-Download or clone the repository
-
-Open index.html in your browser
-
-Enter temperature → Select unit → Click Convert
-
-🎯 Learning Outcome
-
-Input validation
-
-JavaScript functions
-
-DOM manipulation
-
-Temperature conversion formulas
+## 👨‍💻 Author
+Haridas Sai Ganesh
+Web Development Intern
