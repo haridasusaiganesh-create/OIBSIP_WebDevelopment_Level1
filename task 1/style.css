@@ -1,61 +1,77 @@
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     scroll-behavior: smooth;
+    background-color: #f4f4f9;
 }
 
 header {
-    background: linear-gradient(to right, #667eea, #764ba2);
+    background: linear-gradient(135deg, #023e8a, #0077b6);
     color: white;
-    padding: 120px 20px;
+    padding: 140px 20px;
 }
 
+header h1 { font-size: 3rem; margin-bottom: 10px; }
+
 nav {
-    background: #333;
-    padding: 10px;
+    background: #222;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav a {
     color: white;
-    margin: 15px;
+    margin: 0 20px;
     text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-nav a:hover {
-    color: #667eea;
-}
+nav a:hover { color: #00b4d8; }
 
 .btn {
-    background: white;
-    color: #333;
-    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    background: #fff;
+    color: #023e8a;
+    padding: 12px 30px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-section {
-    padding: 60px 20px;
+.btn:hover { background: #00b4d8; color: white; }
+
+section { padding: 80px 20px; }
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
-    display: inline-block;
-    width: 200px;
-    padding: 20px;
-    margin: 15px;
     background: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: 0.3s;
+    width: 250px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    background: #667eea;
-    color: white;
+    border-bottom: 5px solid #0077b6;
 }
 
 footer {
-    background: #333;
-    color: white;
-    padding: 20px;
+    background: #222;
+    color: #888;
+    padding: 30px;
+    font-size: 0.9rem;
 }
