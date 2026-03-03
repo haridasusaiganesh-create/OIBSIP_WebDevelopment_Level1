@@ -1,23 +1,18 @@
 function convertTemp() {
+    var input = document.getElementById("tempInput").value;
+    var unit = document.getElementById("unit").value;
+    var result = document.getElementById("result");
 
-    let degrees = document.getElementById("degrees").value;
-    let type = document.getElementById("type").value;
-    let resultField = document.getElementById("result");
-
-    if (degrees === "") {
-        resultField.value = "Please enter a value";
+    if (input === "") {
+        result.innerHTML = "Please enter a value";
         return;
     }
 
-    degrees = parseFloat(degrees);
-
-    if (type === "fahrenheit") {
-        // Convert Fahrenheit to Celsius
-        let result = (degrees - 32) * 5 / 9;
-        resultField.value = result.toFixed(4) + " °C";
+    if (unit === "c") {
+        var fahrenheit = (input * 9/5) + 32;
+        result.innerHTML = input + "°C = " + fahrenheit.toFixed(2) + "°F";
     } else {
-        // Convert Celsius to Fahrenheit
-        let result = (degrees * 9 / 5) + 32;
-        resultField.value = result.toFixed(4) + " °F";
+        var celsius = (input - 32) * 5/9;
+        result.innerHTML = input + "°F = " + celsius.toFixed(2) + "°C";
     }
 }
