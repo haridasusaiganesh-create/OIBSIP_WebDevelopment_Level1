@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sai Ganesh Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <!-- Header -->
-<header id="header">
+<header>
   <div class="container">
     <h1 class="logo">Sai Ganesh</h1>
     <nav>
@@ -24,10 +23,10 @@
 
 <!-- Hero Section -->
 <section class="hero">
-  <div class="hero-content">
-    <h2>Hello, I'm Sai Ganesh</h2>
-    <p>Web Developer | Frontend Enthusiast | Problem Solver</p>
-    <a href="#projects" class="btn">View Projects</a>
+  <div class="container">
+    <h2>Hi, I'm Sai Ganesh</h2>
+    <p>Frontend Developer | Problem Solver | Tech Enthusiast</p>
+    <a href="#projects" class="btn">See My Work</a>
   </div>
 </section>
 
@@ -35,15 +34,7 @@
 <section id="about" class="section">
   <div class="container">
     <h2>About Me</h2>
-    <div class="about-content">
-      <div class="about-text">
-        <p>I am a passionate web developer with experience in building responsive and modern websites. I focus on clean code, fast performance, and creating user-friendly interfaces.</p>
-        <p>I love learning new technologies, problem-solving, and building projects that make a difference.</p>
-      </div>
-      <div class="about-img">
-        <img src="images/profile.jpg" alt="Sai Ganesh Profile">
-      </div>
-    </div>
+    <p>I am a passionate web developer with a focus on clean, responsive, and modern web interfaces. I love turning ideas into reality with efficient code and creative design.</p>
   </div>
 </section>
 
@@ -54,33 +45,19 @@
     <div class="skills-grid">
       <div class="skill">
         <h3>HTML</h3>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width: 95%"></div>
-        </div>
+        <div class="skill-bar"><span style="width:95%"></span></div>
       </div>
       <div class="skill">
         <h3>CSS</h3>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width: 90%"></div>
-        </div>
+        <div class="skill-bar"><span style="width:90%"></span></div>
       </div>
       <div class="skill">
         <h3>JavaScript</h3>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width: 85%"></div>
-        </div>
+        <div class="skill-bar"><span style="width:85%"></span></div>
       </div>
       <div class="skill">
         <h3>React</h3>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width: 80%"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <h3>Python</h3>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width: 75%"></div>
-        </div>
+        <div class="skill-bar"><span style="width:80%"></span></div>
       </div>
     </div>
   </div>
@@ -92,28 +69,16 @@
     <h2>Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <img src="images/project1.jpg" alt="Landing Page">
-        <div class="project-info">
-          <h3>Landing Page</h3>
-          <p>Responsive landing page with modern design.</p>
-          <a href="#" class="btn">View</a>
-        </div>
+        <h3>Landing Page</h3>
+        <p>Responsive landing page with modern design.</p>
       </div>
       <div class="project-card">
-        <img src="images/project2.jpg" alt="Portfolio Website">
-        <div class="project-info">
-          <h3>Portfolio Website</h3>
-          <p>Modern portfolio to showcase skills and projects.</p>
-          <a href="#" class="btn">View</a>
-        </div>
+        <h3>Portfolio Website</h3>
+        <p>Personal portfolio showcasing my skills and projects.</p>
       </div>
       <div class="project-card">
-        <img src="images/project3.jpg" alt="Todo App">
-        <div class="project-info">
-          <h3>Todo App</h3>
-          <p>Interactive JavaScript-based task manager.</p>
-          <a href="#" class="btn">View</a>
-        </div>
+        <h3>Todo App</h3>
+        <p>Interactive task manager built with JavaScript.</p>
       </div>
     </div>
   </div>
@@ -138,6 +103,17 @@
     <p>&copy; 2026 Sai Ganesh. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- Minimal JS for smooth scroll -->
+<script>
+  document.querySelectorAll('header nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
 
 </body>
 </html>
