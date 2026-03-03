@@ -1,82 +1,42 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 body {
-    line-height: 1.6;
+    margin: 0;
+    font-family: Arial;
+    text-align: center;
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(to right, #f6d365, #fda085);
-    color: #222;
-    text-align: center;
+header {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
     padding: 100px 20px;
 }
 
-.hero h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.hero button {
-    padding: 12px 25px;
-    border: none;
-    background-color: #0a8754;
-    color: white;
-    font-size: 16px;
-    border-radius: 25px;
-    cursor: pointer;
-}
-
-.hero button:hover {
-    background-color: #06663f;
-}
-
-/* Features Section */
-.features {
-    display: flex;
-    justify-content: space-around;
-    padding: 60px 20px;
-    background-color: #f4f4f4;
-}
-
-.feature-box {
-    width: 30%;
-    padding: 20px;
+.btn {
     background: white;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-.feature-box h2 {
-    margin-bottom: 15px;
+section {
+    padding: 50px 20px;
 }
 
-/* Image Section */
-.image-section {
-    text-align: center;
-    padding: 50px;
+.services {
+    background: #f4f4f4;
 }
 
-.image-section img {
-    width: 60%;
-    max-width: 600px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
+.card {
+    background: white;
+    margin: 15px;
     padding: 20px;
-    background-color: #222;
+    display: inline-block;
+    width: 200px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+footer {
+    background: #333;
     color: white;
+    padding: 20px;
 }
