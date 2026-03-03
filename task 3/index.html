@@ -8,55 +8,29 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header>
-    <nav>
-      <div class="logo">B</div>
-      <ul class="nav-links">
-        <li><a href="#converter">Converter</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <div class="hero">
-      <div class="hero-text">
-        <h1>Temperature Converter<span>.</span></h1>
-        <p>Convert temperatures between Celsius and Fahrenheit quickly and easily.</p>
-      </div>
-      <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1581091215360-0f26aa9f3b05?q=80&w=600" alt="Temperature">
-      </div>
-    </div>
-  </header>
-
-  <!-- Converter Section -->
-  <section id="converter" class="section-padding">
-    <h2>Convert Temperature</h2>
-    <div class="converter-card">
+  <!-- Converter Box -->
+  <section class="converter-section">
+    <div class="converter-box">
+      <h1>Temperature Converter<span>.</span></h1>
       <input type="number" id="tempInput" placeholder="Enter Temperature">
-      <select id="unit">
-        <option value="C">Celsius</option>
-        <option value="F">Fahrenheit</option>
-      </select>
+      
+      <div class="unit-select">
+        <label>
+          <input type="radio" name="unit" value="C" checked> Celsius
+        </label>
+        <label>
+          <input type="radio" name="unit" value="F"> Fahrenheit
+        </label>
+        <label>
+          <input type="radio" name="unit" value="K"> Kelvin
+        </label>
+      </div>
+      
       <button class="cta-btn" onclick="convertTemp()">Convert</button>
       <p class="result" id="result">Result will appear here</p>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="section-padding">
-    <h2>About This Tool</h2>
-    <p>This temperature converter allows you to easily switch between Celsius and Fahrenheit. It’s responsive, modern, and built using HTML, CSS, and JavaScript.</p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Sai Ganesh. All rights reserved.</p>
-  </footer>
-
-  <!-- JavaScript -->
   <script src="script.js"></script>
-
 </body>
 </html>
