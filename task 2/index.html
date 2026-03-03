@@ -1,119 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sai Ganesh Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Ganesh | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Header -->
-<header>
-  <div class="container">
-    <h1 class="logo">Sai Ganesh</h1>
+    <!-- Navigation -->
     <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+        <div class="logo">SG</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
-  </div>
-</header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <h2>Hi, I'm Sai Ganesh</h2>
-    <p>Frontend Developer | Problem Solver | Tech Enthusiast</p>
-    <a href="#projects" class="btn">See My Work</a>
-  </div>
-</section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Sai<br>Ganesh<span>.</span></h1>
+            <div class="social-icons">
+                <a href="#" title="GitHub">🐙</a>
+                <a href="#" title="LinkedIn">in</a>
+                <a href="#" title="Twitter">🐦</a>
+            </div>
+        </div>
+        
+        <div class="hero-image">
+            <img src="images/profile.jpg" alt="Sai Ganesh Profile">
+        </div>
 
-<!-- About Section -->
-<section id="about" class="section">
-  <div class="container">
-    <h2>About Me</h2>
-    <p>I am a passionate web developer with a focus on clean, responsive, and modern web interfaces. I love turning ideas into reality with efficient code and creative design.</p>
-  </div>
-</section>
+        <div class="hero-intro">
+            <p class="label">— Introduction</p>
+            <h2>Frontend Developer | Web Designer | Tech Enthusiast</h2>
+            <p class="description">I create modern, responsive websites with clean code and engaging design, focusing on usability and aesthetics.</p>
+            <a href="#projects" class="story-link">View My Work ➔</a>
+        </div>
+    </section>
 
-<!-- Skills Section -->
-<section id="skills" class="section">
-  <div class="container">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill">
-        <h3>HTML</h3>
-        <div class="skill-bar"><span style="width:95%"></span></div>
-      </div>
-      <div class="skill">
-        <h3>CSS</h3>
-        <div class="skill-bar"><span style="width:90%"></span></div>
-      </div>
-      <div class="skill">
-        <h3>JavaScript</h3>
-        <div class="skill-bar"><span style="width:85%"></span></div>
-      </div>
-      <div class="skill">
-        <h3>React</h3>
-        <div class="skill-bar"><span style="width:80%"></span></div>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am a dedicated web developer passionate about creating interactive and responsive web applications. My focus is on clean, efficient code and great user experience.</p>
+    </section>
 
-<!-- Projects Section -->
-<section id="projects" class="section">
-  <div class="container">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Landing Page</h3>
-        <p>Responsive landing page with modern design.</p>
-      </div>
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>Personal portfolio showcasing my skills and projects.</p>
-      </div>
-      <div class="project-card">
-        <h3>Todo App</h3>
-        <p>Interactive task manager built with JavaScript.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <h3>HTML</h3>
+                <div class="skill-bar"><span style="width:95%"></span></div>
+            </div>
+            <div class="skill">
+                <h3>CSS</h3>
+                <div class="skill-bar"><span style="width:90%"></span></div>
+            </div>
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <div class="skill-bar"><span style="width:85%"></span></div>
+            </div>
+            <div class="skill">
+                <h3>React</h3>
+                <div class="skill-bar"><span style="width:80%"></span></div>
+            </div>
+        </div>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="section">
-  <div class="container">
-    <h2>Contact Me</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="services">
+            <div class="card active">
+                <div class="icon">📦</div>
+                <h3>Landing Page</h3>
+                <p>Responsive landing page with modern UI.</p>
+            </div>
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Portfolio Website</h3>
+                <p>My personal developer portfolio.</p>
+            </div>
+            <div class="card">
+                <div class="icon">📝</div>
+                <h3>Todo App</h3>
+                <p>Interactive JavaScript project.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- Footer -->
-<footer>
-  <div class="container">
-    <p>&copy; 2026 Sai Ganesh. All rights reserved.</p>
-  </div>
-</footer>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-<!-- Minimal JS for smooth scroll -->
-<script>
-  document.querySelectorAll('header nav a').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
-      target.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-</script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sai Ganesh. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
