@@ -1,35 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Temperature Converter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="app">
-        <h2>Temperature converter</h2>
+    <div class="container">
+        <h1>Temperature Converter</h1>
 
-        <div class="input-group">
-            <label>Degrees</label>
-            <input type="number" id="degrees" placeholder="Enter value">
-        </div>
+        <input type="number" id="tempInput" placeholder="Enter temperature">
 
-        <div class="input-group">
-            <label>Type</label>
-            <select id="type">
-                <option value="fahrenheit">Fahrenheit</option>
-                <option value="celsius">Celsius</option>
-            </select>
-        </div>
-
-        <div class="input-group">
-            <label>Result</label>
-            <input type="text" id="result" readonly>
-        </div>
+        <select id="unit">
+            <option value="c">Celsius to Fahrenheit</option>
+            <option value="f">Fahrenheit to Celsius</option>
+        </select>
 
         <button onclick="convertTemp()">Convert</button>
+
+        <h2 id="result"></h2>
     </div>
 
     <script src="script.js"></script>
