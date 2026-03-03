@@ -1,61 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>OIBSIP Web Development Level 1</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            text-align: center;
-            background: linear-gradient(135deg, #4e73df, #1cc88a);
-            color: white;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3 | Temperature Converter</title>
+  <style>
+    /* Reset & Body */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-        .container {
-            margin-top: 100px;
-        }
+    /* Converter Box */
+    .converter-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .converter-box {
+      background: #ffffff;
+      padding: 40px 50px;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+    .converter-box h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #00a87e;
+    }
+    .converter-box input {
+      width: 100%;
+      padding: 15px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+    .unit-select {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+    .unit-select label {
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .cta-btn {
+      background: #00a87e;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+    .cta-btn:hover {
+      background: #008a65;
+    }
+    .result {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #001c3d;
+    }
 
-        h1 {
-            font-size: 40px;
-        }
-
-        .btn {
-            display: block;
-            width: 250px;
-            margin: 20px auto;
-            padding: 15px;
-            background: white;
-            color: #333;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background: #f4f4f4;
-        }
-
-        footer {
-            margin-top: 50px;
-        }
-    </style>
+    /* Responsive */
+    @media (max-width: 500px) {
+      .converter-box {
+        padding: 30px 20px;
+      }
+      .converter-box h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>OIBSIP Internship</h1>
-    <h2>Web Development Level 1 Projects</h2>
+  <!-- Converter Box -->
+  <section class="converter-section">
+    <div class="converter-box">
+      <h1>Temperature Converter<span>.</span></h1>
+      <input type="number" id="tempInput" placeholder="Enter Temperature">
+      
+      <div class="unit-select">
+        <label><input type="radio" name="unit" value="C" checked> Celsius</label>
+        <label><input type="radio" name="unit" value="F"> Fahrenheit</label>
+        <label><input type="radio" name="unit" value="K"> Kelvin</label>
+      </div>
+      
+      <button class="cta-btn" onclick="convertTemp()">Convert</button>
+      <p class="result" id="result">Result will appear here</p>
+    </div>
+  </section>
 
-    <!-- IMPORTANT: space replaced with %20 -->
-    <a href="task%201/" class="btn">Task 1 - Landing Page</a>
-    <a href="task%202/" class="btn">Task 2 - Portfolio</a>
-    <a href="task%203/" class="btn">Task 3 - Temperature Converter</a>
+  <script>
+    function convertTemp() {
+      const tempInput = parseFloat(document.getElementById('tempInput').value);
+      const result = document.getElementById('result');
+      
+      // Get selected unit
+      const unitElements = document.getElementsByName('unit');
+      let selectedUnit;
+      for (const u of unitElements) {
+        if (u.checked) {
+          selectedUnit = u.value;
+          break;
+        }
+      }
 
-    <footer>
-        © 2026 Haridas Sai Ganesh
-    </footer>
-</div>
+      if (isNaN(tempInput)) {
+        result.textContent = "Please enter a valid number.";
+        return;
+      }
+
+      let celsius, fahrenheit, kelvin;
+
+      if (selectedUnit === "C") {
+        celsius = tempInput;
+        fahrenheit = (tempInput * 9/5) + 32;
+        kelvin = tempInput + 273.15;
+      } else if (selectedUnit === "F") {
+        celsius = (tempInput - 32) * 5/9;
+        fahrenheit = tempInput;
+        kelvin = celsius + 273.15;
+      } else {
+        celsius = tempInput - 273.15;
+        fahrenheit = (celsius * 9/5) + 32;
+        kelvin = tempInput;
+      }
+
+      result.textContent = 
+        `${celsius.toFixed(2)}°C | ${fahrenheit.toFixed(2)}°F | ${kelvin.toFixed(2)}K`;
+    }
+  </script>
 
 </body>
 </html>
