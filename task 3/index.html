@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Temperature Converter | OIBSIP</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <h1>Temperature Converter</h1>
+    <h2>Temperature Converter</h2>
 
-    <input type="number" id="temperature" placeholder="Enter temperature">
+    <input type="number" id="temp" placeholder="Enter value">
 
     <select id="unit">
-        <option value="c">Celsius → Fahrenheit</option>
-        <option value="f">Fahrenheit → Celsius</option>
+        <option value="c">Celsius to Fahrenheit</option>
+        <option value="f">Fahrenheit to Celsius</option>
     </select>
 
-    <button onclick="convertTemp()">Convert</button>
+    <button onclick="convert()">Convert</button>
 
-    <h2 id="result"></h2>
+    <h3 id="result"></h3>
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
