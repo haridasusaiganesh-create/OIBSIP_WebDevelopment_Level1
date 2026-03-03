@@ -1,26 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Temperature Converter</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3 | Temperature Converter</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h2>Temperature Converter</h2>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="logo">B</div>
+      <ul class="nav-links">
+        <li><a href="#converter">Converter</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
 
-    <input type="number" id="temp" placeholder="Enter value">
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Temperature Converter<span>.</span></h1>
+        <p>Convert temperatures between Celsius and Fahrenheit quickly and easily.</p>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1581091215360-0f26aa9f3b05?q=80&w=600" alt="Temperature">
+      </div>
+    </div>
+  </header>
 
-    <select id="unit">
-        <option value="c">Celsius to Fahrenheit</option>
-        <option value="f">Fahrenheit to Celsius</option>
-    </select>
+  <!-- Converter Section -->
+  <section id="converter" class="section-padding">
+    <h2>Convert Temperature</h2>
+    <div class="converter-card">
+      <input type="number" id="tempInput" placeholder="Enter Temperature">
+      <select id="unit">
+        <option value="C">Celsius</option>
+        <option value="F">Fahrenheit</option>
+      </select>
+      <button class="cta-btn" onclick="convertTemp()">Convert</button>
+      <p class="result" id="result">Result will appear here</p>
+    </div>
+  </section>
 
-    <button onclick="convert()">Convert</button>
+  <!-- About Section -->
+  <section id="about" class="section-padding">
+    <h2>About This Tool</h2>
+    <p>This temperature converter allows you to easily switch between Celsius and Fahrenheit. It’s responsive, modern, and built using HTML, CSS, and JavaScript.</p>
+  </section>
 
-    <h3 id="result"></h3>
-</div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Sai Ganesh. All rights reserved.</p>
+  </footer>
 
-<script src="script.js"></script>
+  <script>
+    function convertTemp() {
+      const temp = parseFloat(document.getElementById('tempInput').value);
+      const unit = document.getElementById('unit').value;
+      const result = document.getElementById('result');
+
+      if (isNaN(temp)) {
+        result.textContent = "Please enter a valid number.";
+        return;
+      }
+
+      if (unit === "C") {
+        const fahrenheit = (temp * 9/5) + 32;
+        result.textContent = `${temp}°C = ${fahrenheit.toFixed(2)}°F`;
+      } else {
+        const celsius = (temp - 32) * 5/9;
+        result.textContent = `${temp}°F = ${celsius.toFixed(2)}°C`;
+      }
+    }
+  </script>
+
 </body>
 </html>
