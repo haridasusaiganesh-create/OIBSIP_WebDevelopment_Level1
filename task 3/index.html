@@ -1,44 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Temperature Converter</title>
-    <style>
-        body { 
-            font-family: Arial; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            background: linear-gradient(to right, #667eea, #764ba2);
-        }
-        .box {
-            background: white;
-            padding: 40px;
-            text-align: center;
-            border-radius: 10px;
-        }
-        input, select, button {
-            padding: 10px;
-            margin: 10px;
-            width: 100%;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Temperature Converter | OIBSIP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="box">
-    <h2>Temperature Converter</h2>
+<div class="container">
+    <h1>Temperature Converter</h1>
 
-    <input type="number" id="temp" placeholder="Enter temperature">
+    <input type="number" id="temperature" placeholder="Enter temperature">
 
     <select id="unit">
-        <option value="c">Celsius to Fahrenheit</option>
-        <option value="f">Fahrenheit to Celsius</option>
+        <option value="c">Celsius → Fahrenheit</option>
+        <option value="f">Fahrenheit → Celsius</option>
     </select>
 
-    <button onclick="convert()">Convert</button>
+    <button onclick="convertTemp()">Convert</button>
 
-    <h3 id="result"></h3>
+    <h2 id="result"></h2>
 </div>
 
 <script src="script.js"></script>
