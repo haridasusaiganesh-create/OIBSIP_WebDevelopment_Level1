@@ -1,20 +1,18 @@
-function convert() {
-    var value = document.getElementById("temp").value;
-    var unit = document.getElementById("unit").value;
-    var result = document.getElementById("result");
+function convertTemp() {
+  const temp = parseFloat(document.getElementById('tempInput').value);
+  const unit = document.getElementById('unit').value;
+  const result = document.getElementById('result');
 
-    if (value === "") {
-        result.innerHTML = "Enter a value";
-        return;
-    }
+  if (isNaN(temp)) {
+    result.textContent = "Please enter a valid number.";
+    return;
+  }
 
-    value = parseFloat(value);
-
-    if (unit === "c") {
-        var f = (value * 9/5) + 32;
-        result.innerHTML = value + "°C = " + f.toFixed(2) + "°F";
-    } else {
-        var c = (value - 32) * 5/9;
-        result.innerHTML = value + "°F = " + c.toFixed(2) + "°C";
-    }
+  if (unit === "C") {
+    const fahrenheit = (temp * 9/5) + 32;
+    result.textContent = `${temp}°C = ${fahrenheit.toFixed(2)}°F`;
+  } else {
+    const celsius = (temp - 32) * 5/9;
+    result.textContent = `${temp}°F = ${celsius.toFixed(2)}°C`;
+  }
 }
