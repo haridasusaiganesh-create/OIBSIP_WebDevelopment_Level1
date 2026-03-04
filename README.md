@@ -5,7 +5,7 @@ This repository contains the tasks completed for the Oasis Infobyte Web Developm
 🚀 Live Project Links
 🔹 Main Project Page
 
-👉 [Live Link](https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%201/)
+👉 [Live Link](https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/)
 
 🔹 Task 1 – Landing Page
 
