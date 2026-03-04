@@ -1,87 +1,85 @@
-/* Reset & Body */
+/* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background: #f9f9f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    height: 100vh;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Converter Box */
-.converter-box {
-  background: #ffffff;
-  padding: 40px 50px;
-  border-radius: 15px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-  text-align: center;
-  max-width: 400px;
-  width: 90%;
+/* Main Box */
+.container {
+    background: #ffffff;
+    width: 350px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.converter-box h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #00a87e;
+/* Title */
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
 }
 
-.converter-box input {
-  width: 100%;
-  padding: 15px;
-  font-size: 1rem;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  margin-bottom: 20px;
+/* Form Group */
+.form-group {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Unit Selection */
-.unit-select {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+.form-group label {
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 14px;
 }
 
-.unit-select label {
-  font-weight: 500;
-  cursor: pointer;
+/* Inputs & Select */
+input,
+select {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+}
+
+input:focus,
+select:focus {
+    border-bottom: 2px solid #1e73e8;
 }
 
 /* Button */
-.cta-btn {
-  background: #00a87e;
-  color: white;
-  border: none;
-  padding: 15px 25px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  transition: 0.3s;
+.convert-btn {
+    width: 100%;
+    padding: 14px;
+    background: #1e73e8;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
 }
 
-.cta-btn:hover {
-  background: #008a65;
-}
-
-/* Result */
-.result {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #001c3d;
+.convert-btn:hover {
+    background: #155ec2;
 }
 
 /* Responsive */
-@media (max-width: 500px) {
-  .converter-box {
-    padding: 30px 20px;
-  }
-  .converter-box h1 {
-    font-size: 2rem;
-  }
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
 }
