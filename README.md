@@ -5,23 +5,23 @@ This repository contains the tasks completed for the Oasis Infobyte Web Developm
 🚀 Live Project Links
 🔹 Main Project Page
 
-👉 Live Link
+👉 [Live Link](https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%201/)
 
 🔹 Task 1 – Landing Page
 
-👉 Live Link
+👉 [Live Link](https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%201/)
 
 A modern responsive landing page built using HTML and CSS with clean layout and design principles.
 
 🔹 Task 2 – Personal Portfolio
 
-👉 Live Link
+👉 [Live Link](https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%202/)
 
 A professional portfolio website showcasing skills, projects, and contact information.
 
 🔹 Task 3 – Temperature Converter
 
-👉 Live Link
+👉 [Live Link](https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%203/)
 
 A temperature converter web application using HTML, CSS, and JavaScript.
 
