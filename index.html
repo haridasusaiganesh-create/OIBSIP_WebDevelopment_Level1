@@ -1,181 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task 3 | Temperature Converter</title>
+    <meta charset="UTF-8">
+    <title>OIBSIP Web Development Tasks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
 
-    body {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-    }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
 
-    /* Glass Box */
-    .converter-box {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(15px);
-      padding: 45px;
-      border-radius: 20px;
-      width: 380px;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-      animation: fadeIn 1s ease-in-out;
-    }
+        .main-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            width: 400px;
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        h1 {
+            color: white;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
 
-    h1 {
-      margin-bottom: 25px;
-      color: white;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
+        .task-link {
+            display: block;
+            text-decoration: none;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 30px;
+            color: white;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-    /* Input */
-    input[type="number"] {
-      width: 100%;
-      padding: 14px;
-      border-radius: 10px;
-      border: none;
-      margin-bottom: 20px;
-      font-size: 16px;
-      outline: none;
-    }
+        .task1 {
+            background: linear-gradient(90deg, #ff512f, #dd2476);
+        }
 
-    /* Custom Radio Buttons */
-    .unit-select {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 25px;
-      color: white;
-      font-size: 14px;
-    }
+        .task2 {
+            background: linear-gradient(90deg, #11998e, #38ef7d);
+        }
 
-    .unit-select input {
-      margin-right: 5px;
-      accent-color: #ffdd57;
-      cursor: pointer;
-    }
+        .task3 {
+            background: linear-gradient(90deg, #396afc, #2948ff);
+        }
 
-    /* Button */
-    .cta-btn {
-      width: 100%;
-      padding: 14px;
-      border-radius: 30px;
-      border: none;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      color: white;
-      background: linear-gradient(90deg, #ff512f, #dd2476);
-      transition: all 0.4s ease;
-    }
+        .task-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
 
-    .cta-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
+        footer {
+            margin-top: 30px;
+            color: white;
+            font-size: 14px;
+        }
 
-    /* Result */
-    .result {
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: 600;
-      color: #ffffff;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
-
-    .show {
-      opacity: 1;
-    }
-
-    /* Responsive */
-    @media (max-width: 420px) {
-      .converter-box {
-        width: 90%;
-        padding: 30px;
-      }
-    }
-
-  </style>
+        @media (max-width: 420px) {
+            .main-container {
+                width: 90%;
+                padding: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="converter-box">
-    <h1>Temperature Converter</h1>
+    <div class="main-container">
+        <h1>OIBSIP Web Development Internship</h1>
 
-    <input type="number" id="tempInput" placeholder="Enter Temperature">
+        <a href="task1.html" class="task-link task1">
+            Task 1 - Landing Page
+        </a>
 
-    <div class="unit-select">
-      <label><input type="radio" name="unit" value="C" checked> Celsius</label>
-      <label><input type="radio" name="unit" value="F"> Fahrenheit</label>
-      <label><input type="radio" name="unit" value="K"> Kelvin</label>
+        <a href="task2.html" class="task-link task2">
+            Task 2 - Portfolio
+        </a>
+
+        <a href="task3.html" class="task-link task3">
+            Task 3 - Temperature Converter
+        </a>
+
+        <footer>
+            © 2026 Sai Ganesh | All Tasks
+        </footer>
     </div>
-
-    <button class="cta-btn" onclick="convertTemp()">Convert</button>
-
-    <p class="result" id="result">Result will appear here</p>
-  </div>
-
-  <script>
-    function convertTemp() {
-      const tempInput = parseFloat(document.getElementById('tempInput').value);
-      const result = document.getElementById('result');
-
-      const unitElements = document.getElementsByName('unit');
-      let selectedUnit;
-
-      for (const u of unitElements) {
-        if (u.checked) {
-          selectedUnit = u.value;
-          break;
-        }
-      }
-
-      if (isNaN(tempInput)) {
-        result.textContent = "Please enter a valid number.";
-        result.classList.add("show");
-        return;
-      }
-
-      let celsius, fahrenheit, kelvin;
-
-      if (selectedUnit === "C") {
-        celsius = tempInput;
-        fahrenheit = (tempInput * 9/5) + 32;
-        kelvin = tempInput + 273.15;
-      } else if (selectedUnit === "F") {
-        celsius = (tempInput - 32) * 5/9;
-        fahrenheit = tempInput;
-        kelvin = celsius + 273.15;
-      } else {
-        celsius = tempInput - 273.15;
-        fahrenheit = (celsius * 9/5) + 32;
-        kelvin = tempInput;
-      }
-
-      result.textContent =
-        `${celsius.toFixed(2)}°C | ${fahrenheit.toFixed(2)}°F | ${kelvin.toFixed(2)}K`;
-
-      result.classList.add("show");
-    }
-  </script>
 
 </body>
 </html>
