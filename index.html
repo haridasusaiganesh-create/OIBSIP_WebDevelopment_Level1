@@ -4,118 +4,143 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Task 3 | Temperature Converter</title>
+
   <style>
-    /* Reset & Body */
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
     body {
-      background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
     }
 
-    /* Converter Box */
-    .converter-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-    }
+    /* Glass Box */
     .converter-box {
-      background: #ffffff;
-      padding: 40px 50px;
-      border-radius: 15px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      padding: 45px;
+      border-radius: 20px;
+      width: 380px;
       text-align: center;
-      max-width: 400px;
-      width: 90%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease-in-out;
     }
-    .converter-box h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #00a87e;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    .converter-box input {
+
+    h1 {
+      margin-bottom: 25px;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* Input */
+    input[type="number"] {
       width: 100%;
-      padding: 15px;
-      font-size: 1rem;
+      padding: 14px;
       border-radius: 10px;
-      border: 1px solid #ddd;
+      border: none;
       margin-bottom: 20px;
+      font-size: 16px;
+      outline: none;
     }
+
+    /* Custom Radio Buttons */
     .unit-select {
       display: flex;
-      justify-content: space-around;
-      margin-bottom: 20px;
-    }
-    .unit-select label {
-      font-weight: 500;
-      cursor: pointer;
-    }
-    .cta-btn {
-      background: #00a87e;
+      justify-content: space-between;
+      margin-bottom: 25px;
       color: white;
-      border: none;
-      padding: 15px 25px;
-      border-radius: 30px;
+      font-size: 14px;
+    }
+
+    .unit-select input {
+      margin-right: 5px;
+      accent-color: #ffdd57;
       cursor: pointer;
-      font-size: 1rem;
-      margin-bottom: 20px;
-      transition: 0.3s;
     }
+
+    /* Button */
+    .cta-btn {
+      width: 100%;
+      padding: 14px;
+      border-radius: 30px;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(90deg, #ff512f, #dd2476);
+      transition: all 0.4s ease;
+    }
+
     .cta-btn:hover {
-      background: #008a65;
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
+
+    /* Result */
     .result {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #001c3d;
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .show {
+      opacity: 1;
     }
 
     /* Responsive */
-    @media (max-width: 500px) {
+    @media (max-width: 420px) {
       .converter-box {
-        padding: 30px 20px;
-      }
-      .converter-box h1 {
-        font-size: 2rem;
+        width: 90%;
+        padding: 30px;
       }
     }
+
   </style>
 </head>
 <body>
 
-  <!-- Converter Box -->
-  <section class="converter-section">
-    <div class="converter-box">
-      <h1>Temperature Converter<span>.</span></h1>
-      <input type="number" id="tempInput" placeholder="Enter Temperature">
-      
-      <div class="unit-select">
-        <label><input type="radio" name="unit" value="C" checked> Celsius</label>
-        <label><input type="radio" name="unit" value="F"> Fahrenheit</label>
-        <label><input type="radio" name="unit" value="K"> Kelvin</label>
-      </div>
-      
-      <button class="cta-btn" onclick="convertTemp()">Convert</button>
-      <p class="result" id="result">Result will appear here</p>
+  <div class="converter-box">
+    <h1>Temperature Converter</h1>
+
+    <input type="number" id="tempInput" placeholder="Enter Temperature">
+
+    <div class="unit-select">
+      <label><input type="radio" name="unit" value="C" checked> Celsius</label>
+      <label><input type="radio" name="unit" value="F"> Fahrenheit</label>
+      <label><input type="radio" name="unit" value="K"> Kelvin</label>
     </div>
-  </section>
+
+    <button class="cta-btn" onclick="convertTemp()">Convert</button>
+
+    <p class="result" id="result">Result will appear here</p>
+  </div>
 
   <script>
     function convertTemp() {
       const tempInput = parseFloat(document.getElementById('tempInput').value);
       const result = document.getElementById('result');
-      
-      // Get selected unit
+
       const unitElements = document.getElementsByName('unit');
       let selectedUnit;
+
       for (const u of unitElements) {
         if (u.checked) {
           selectedUnit = u.value;
@@ -125,6 +150,7 @@
 
       if (isNaN(tempInput)) {
         result.textContent = "Please enter a valid number.";
+        result.classList.add("show");
         return;
       }
 
@@ -144,8 +170,10 @@
         kelvin = tempInput;
       }
 
-      result.textContent = 
+      result.textContent =
         `${celsius.toFixed(2)}°C | ${fahrenheit.toFixed(2)}°F | ${kelvin.toFixed(2)}K`;
+
+      result.classList.add("show");
     }
   </script>
 
