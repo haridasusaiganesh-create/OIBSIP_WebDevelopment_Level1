@@ -1,38 +1,29 @@
-function convertTemp() {
-  const tempInput = parseFloat(document.getElementById('tempInput').value);
-  const result = document.getElementById('result');
-  
-  // Get selected unit
-  const unitElements = document.getElementsByName('unit');
-  let selectedUnit;
-  for (const u of unitElements) {
-    if (u.checked) {
-      selectedUnit = u.value;
-      break;
+function convertTemperature() {
+
+    let degree = document.getElementById("degrees").value;
+    let type = document.getElementById("type").value;
+    let resultField = document.getElementById("result");
+
+    if (degree === "" || isNaN(degree)) {
+        resultField.value = "Please enter valid number";
+        return;
     }
-  }
 
-  if (isNaN(tempInput)) {
-    result.textContent = "Please enter a valid number.";
-    return;
-  }
+    degree = parseFloat(degree);
+    let result;
 
-  let celsius, fahrenheit, kelvin;
+    if (type === "C") {
+        result = (degree * 9/5) + 32;
+        resultField.value = result.toFixed(4) + " °F";
+    }
 
-  if (selectedUnit === "C") {
-    celsius = tempInput;
-    fahrenheit = (tempInput * 9/5) + 32;
-    kelvin = tempInput + 273.15;
-  } else if (selectedUnit === "F") {
-    celsius = (tempInput - 32) * 5/9;
-    fahrenheit = tempInput;
-    kelvin = celsius + 273.15;
-  } else { // Kelvin
-    celsius = tempInput - 273.15;
-    fahrenheit = (celsius * 9/5) + 32;
-    kelvin = tempInput;
-  }
+    else if (type === "F") {
+        result = (degree - 32) * 5/9;
+        resultField.value = result.toFixed(4) + " °C";
+    }
 
-  result.textContent = 
-    `${celsius.toFixed(2)}°C | ${fahrenheit.toFixed(2)}°F | ${kelvin.toFixed(2)}K`;
+    else if (type === "K") {
+        result = degree - 273.15;
+        resultField.value = result.toFixed(4) + " °C";
+    }
 }
