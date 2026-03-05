@@ -3,50 +3,48 @@
 <head>
     <title>OIBSIP Web Development Level 1</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #1f4037, #99f2c8);
+            background-color: #f4f4f4;
             text-align: center;
-            color: white;
         }
 
         header {
-            padding: 30px;
-            background: rgba(0,0,0,0.6);
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
         }
 
-        h1 {
-            margin: 0;
-            font-size: 36px;
+        nav {
+            margin-top: 15px;
         }
 
-        .container {
-            margin-top: 80px;
-        }
-
-        .task-btn {
-            display: inline-block;
-            margin: 20px;
-            padding: 20px 40px;
-            font-size: 20px;
+        nav a {
             text-decoration: none;
             color: white;
-            background: #ff6f61;
-            border-radius: 8px;
+            background-color: #007bff;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            display: inline-block;
             transition: 0.3s;
         }
 
-        .task-btn:hover {
-            background: #ff3b2e;
-            transform: scale(1.05);
+        nav a:hover {
+            background-color: #0056b3;
+        }
+
+        section {
+            padding: 60px 20px;
         }
 
         footer {
-            margin-top: 100px;
-            padding: 20px;
-            background: rgba(0,0,0,0.6);
+            background-color: #222;
+            color: white;
+            padding: 15px;
         }
     </style>
 </head>
@@ -55,33 +53,33 @@
 
 <header>
     <h1>OIBSIP Web Development Internship</h1>
-    <p>Level 1 - Task Projects</p>
+    <p>Level 1 - Project Tasks</p>
+
+    <nav>
+        <a href="https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%201/" target="_blank">
+            Task 1 - Landing Page
+        </a>
+
+        <a href="https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%202/" target="_blank">
+            Task 2 - Portfolio
+        </a>
+
+        <a href="https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%203/" target="_blank">
+            Task 3 - Temperature Converter
+        </a>
+    </nav>
 </header>
 
-<div class="container">
-
-    <a class="task-btn" 
-       href="https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%201/" 
-       target="_blank">
-       Task 1 - Landing Page
-    </a>
-
-    <a class="task-btn" 
-       href="https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%202/" 
-       target="_blank">
-       Task 2 - Portfolio
-    </a>
-
-    <a class="task-btn" 
-       href="https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%203/" 
-       target="_blank">
-       Task 3 - Temperature Converter
-    </a>
-
-</div>
+<section>
+    <h2>Welcome</h2>
+    <p>
+        This repository contains the projects completed for the 
+        Oasis Infobyte Web Development Internship (Level 1).
+    </p>
+</section>
 
 <footer>
-    © 2026 Sai Ganesh | OIBSIP Internship Project
+    © 2026 Sai Ganesh | OIBSIP Internship
 </footer>
 
 </body>
