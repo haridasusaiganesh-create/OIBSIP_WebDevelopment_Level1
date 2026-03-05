@@ -1,93 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <title>OIBSIP Web Development Level 1</title>
     <meta charset="UTF-8">
-    <title>OIBSIP Web Development Internship</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
         body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1f4037, #99f2c8);
+            text-align: center;
+            color: white;
         }
 
-        .container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 50px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            width: 420px;
+        header {
+            padding: 30px;
+            background: rgba(0,0,0,0.6);
         }
 
         h1 {
-            color: white;
-            margin-bottom: 40px;
+            margin: 0;
+            font-size: 36px;
         }
 
-        .task-link {
-            display: block;
+        .container {
+            margin-top: 80px;
+        }
+
+        .task-btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px 40px;
+            font-size: 20px;
             text-decoration: none;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 30px;
             color: white;
-            font-weight: bold;
+            background: #ff6f61;
+            border-radius: 8px;
             transition: 0.3s;
         }
 
-        .task1 { background: #ff4b2b; }
-        .task2 { background: #11998e; }
-        .task3 { background: #396afc; }
-
-        .task-link:hover {
+        .task-btn:hover {
+            background: #ff3b2e;
             transform: scale(1.05);
         }
 
         footer {
-            margin-top: 20px;
-            color: white;
-            font-size: 14px;
+            margin-top: 100px;
+            padding: 20px;
+            background: rgba(0,0,0,0.6);
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
+<header>
     <h1>OIBSIP Web Development Internship</h1>
+    <p>Level 1 - Task Projects</p>
+</header>
 
-    <!-- DIRECT FULL LINKS (100% No 404) -->
+<div class="container">
 
-    <a href="https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%201/" 
-       class="task-link task1">
-        Task 1 - Landing Page
+    <a class="task-btn" 
+       href="https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%201/" 
+       target="_blank">
+       Task 1 - Landing Page
     </a>
 
-    <a href="https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%202/" 
-       class="task-link task2">
-        Task 2 - Portfolio
+    <a class="task-btn" 
+       href="https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%202/" 
+       target="_blank">
+       Task 2 - Portfolio
     </a>
 
-    <a href="https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%203/" 
-       class="task-link task3">
-        Task 3 - Temperature Converter
+    <a class="task-btn" 
+       href="https://haridasusaiganesh-create.github.io/OIBSIP_WebDevelopment_Level1/task%203/" 
+       target="_blank">
+       Task 3 - Temperature Converter
     </a>
 
-    <footer>
-        © 2026 Sai Ganesh | All Tasks
-    </footer>
 </div>
+
+<footer>
+    © 2026 Sai Ganesh | OIBSIP Internship Project
+</footer>
 
 </body>
 </html>
